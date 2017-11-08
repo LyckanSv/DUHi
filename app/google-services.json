@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "804558810145",
+    "firebase_url": "https://duhi-ecfc6.firebaseio.com",
+    "project_id": "duhi-ecfc6",
+    "storage_bucket": "duhi-ecfc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804558810145:android:fe3b51a16db35318",
+        "android_client_info": {
+          "package_name": "sv.com.lyckan.duhi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804558810145-smqutv7fr8m5afkfgetchpv0p28erse6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.com.lyckan.duhi",
+            "certificate_hash": "27eaa14ecb08218115beb3da0cb8c1fe8d2fd615"
+          }
+        },
+        {
+          "client_id": "804558810145-f46h359u1ag33bjimanfigg0n4h1fre1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjljaEWZxenmpNm9HGkP9WGf8G3wRkG_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804558810145-f46h359u1ag33bjimanfigg0n4h1fre1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

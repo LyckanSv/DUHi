@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+        <EditTextPreference
+            android:defaultValue="@string/url_history_general_all"
+            android:key="key_gallery_name"
+            android:summary="Direccion IP"
+            android:title="IP Servidor" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
