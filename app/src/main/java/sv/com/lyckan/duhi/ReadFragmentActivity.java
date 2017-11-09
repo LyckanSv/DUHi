@@ -5,11 +5,8 @@ import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
+
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,11 +22,12 @@ import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import sv.com.lyckan.cuentameuncuento.adapter.ReadPageAdapter;
-import sv.com.lyckan.cuentameuncuento.pojos.Chapter;
-import sv.com.lyckan.cuentameuncuento.pojos.History;
-import sv.com.lyckan.cuentameuncuento.pojos.SelectHistory;
-import sv.com.lyckan.cuentameuncuento.webservice.ApiController;
+import sv.com.lyckan.duhi.adapter.ReadPageAdapter;
+import sv.com.lyckan.duhi.pojos.Chapter;
+import sv.com.lyckan.duhi.pojos.History;
+import sv.com.lyckan.duhi.pojos.SelectHistory;
+import sv.com.lyckan.duhi.webservice.ApiController;
+
 
 public class ReadFragmentActivity extends FragmentActivity {
 
@@ -64,7 +62,7 @@ public class ReadFragmentActivity extends FragmentActivity {
             }
         });
 
-        Picasso.with(this).load(articulo.getImage()).into(imageView);
+        Picasso.with(this).load(DataInfo.URL + articulo.getImage()).into(imageView);
         textView.setText(articulo.getTitle());
 
     }
@@ -74,7 +72,7 @@ public class ReadFragmentActivity extends FragmentActivity {
         int pos = 1;
         for(Chapter chapter: chapters){
             String txt = pos+"/"+ chapters.size() ;
-            fList.add(ScreenSlidePageFragment.newInstance(chapter.getImage(), chapter.getBody(), txt));
+            fList.add(ScreenSlidePageFragment.newInstance(chapter.getImage_url(), chapter.getBody(), txt));
             pos++;
         }
 
@@ -84,7 +82,7 @@ public class ReadFragmentActivity extends FragmentActivity {
     private void getData(String key){
 
         ApiController ctr = new ApiController();
-        ApiController.Controller controller = ctr.getHistorySelected(getResources().getString(R.string.url_history_general_all));
+        ApiController.Controller controller = ctr.getHistorySelected(DataInfo.URL);
 
         controller.getHistory(key).enqueue(new Callback<SelectHistory>() {
             @Override

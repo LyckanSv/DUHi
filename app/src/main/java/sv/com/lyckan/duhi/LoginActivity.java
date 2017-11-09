@@ -42,12 +42,6 @@ public class LoginActivity extends AppCompatActivity implements
         mAuth = FirebaseAuth.getInstance();
         View adContainer = findViewById(R.id.adMobView);
 
-//        AdView mAdView = new AdView(this);
-//        mAdView.setAdSize(AdSize.BANNER);
-//        mAdView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
-//        ((RelativeLayout)adContainer).addView(mAdView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
         logIn();
     }
 

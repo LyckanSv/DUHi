@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    >
 
     <ImageView
         android:id="@+id/imageChapter"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+
+
         app:srcCompat="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:id="@+id/adMobView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="153dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/numPage"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageChapter"
+        android:layout_above="@id/adMobView"
+        android:layout_marginTop="32dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,12 +41,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/numPage"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintVertical_bias="1.0">
+            >
 
             <TextView
                 android:id="@+id/body"
@@ -64,45 +51,30 @@
         </LinearLayout>
     </ScrollView>
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65"
 
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="332dp" />
+
 
     <TextView
         android:id="@+id/numPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="12dp"
+        android:text="0"
+        />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="@color/colorAccent"
-        android:src="@drawable/ic_play_arrow_black"
-        android:tint="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="@+id/imageChapter"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="@+id/imageChapter"
-        app:layout_constraintRight_toRightOf="@+id/imageChapter"
-        app:layout_constraintTop_toTopOf="@+id/imageChapter"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_record_voice_over_black_24dp"
+        android:tint="@color/colorPrimary"
+        />
 
-</android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
 
